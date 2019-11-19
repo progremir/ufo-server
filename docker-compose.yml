@@ -1,0 +1,26 @@
+version: "2.4"
+
+services:
+  django:
+    build:
+      context: .
+    container_name: ufo_django
+    depends_on:
+      - postgres
+    environment:
+      - SECRET_KEY=notasecret
+      - DEBUG=true
+      - ALLOWED_HOSTS=*
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/ufo
+    command: /app/manage.py runserver 0.0.0.0:5000
+    ports:
+      - "5000:5000"
+  postgres:
+    image: postgres:10.6
+    container_name: ufo_postgres
+    environment:
+      - POSTGRES_DB=ufo
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    ports:
+      - "5432:5432"
