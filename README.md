@@ -2,7 +2,6 @@
 [![Build Status](https://travis-ci.com/progremir/ufo-server.svg?token=fywMsTPcnkWZ7cZppNQo&branch=master)](https://travis-ci.com/progremir/ufo-server)
 <img align="right" src="https://user-images.githubusercontent.com/17231674/69140116-0de6a380-0aec-11ea-97df-02f078f0b44a.png">
 
-
 ## Environment variables
 
 | NAME                  | EXAMPLE              | DESCRIPTION                                        |
@@ -52,6 +51,14 @@ python manage.py makemigrations
  
 ```
 python manage.py migrate
+```
+
+## Usage
+
+There is only one endpoint available.
+
+```
+GET /api/optimize?from=Istanbul&to=Prague&to=Moscow
 ```
 
 ## Credits
