@@ -1,11 +1,9 @@
 # UFO | Unfair Flight Optimizer
+[![Build Status](https://travis-ci.com/progremir/ufo-server.svg?token=fywMsTPcnkWZ7cZppNQo&branch=master)](https://travis-ci.com/progremir/ufo-server)
+<img align="right" src="https://user-images.githubusercontent.com/17231674/69140116-0de6a380-0aec-11ea-97df-02f078f0b44a.png">
 
-### Prerequisites
 
-- docker
-- docker-compose
-
-### Environment variables
+## Environment variables
 
 | NAME                  | EXAMPLE              | DESCRIPTION                                        |
 | --------------------- | ---------            | -------------------------------------------------- |
@@ -14,7 +12,13 @@
 | DJANGO_SETTINGS_MODULE| project.settings| Name of the settings module                        |
 | ALLOWED_HOSTS         | *                    | List of allowed hosts, separated by comma(,)       |
 | DATABASE_URL          | postgres://postgres:postgres@localhost:5432/nomadbooks           | Database connection URI                           |
-### Running with Docker
+
+## Getting started
+
+### Prerequisites
+
+- docker
+- docker-compose
 
 Declare environment variables. You can find this information in **ENVIRONMENT VARIABLES** section.
 
@@ -49,3 +53,6 @@ python manage.py makemigrations
 ```
 python manage.py migrate
 ```
+
+## Credits
+Icons made by <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
