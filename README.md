@@ -11,7 +11,7 @@
 | --------------------- | ---------            | -------------------------------------------------- |
 | SECRET_KEY            | notasecret           | A secret key for a particular Django installation. |
 | DEBUG                 | true                 | Flag that turns on debug mode. `true` or `false`   |
-| DJANGO_SETTINGS_MODULE| project.settings.base| Name of the settings module                        |
+| DJANGO_SETTINGS_MODULE| project.settings| Name of the settings module                        |
 | ALLOWED_HOSTS         | *                    | List of allowed hosts, separated by comma(,)       |
 | DATABASE_URL          | postgres://postgres:postgres@localhost:5432/nomadbooks           | Database connection URI                           |
 ### Running with Docker
