@@ -8,8 +8,12 @@ class FlightOptimizerView(APIView):
     def get(self, request):
         departure = request.query_params.get('from')
         destinations = request.query_params.getlist('to')
-        optimizer = DPKFlightOptimizer(departure, destinations, KiwiClient)
-        flight = optimizer.process()
+        try:
+            optimizer = DPKFlightOptimizer(departure, destinations, KiwiClient)
+            flight = optimizer.process()
+        except Exception as e:
+            return Response({'message': str(e)})
+
         return Response(
             {
                 'destination': flight.destination.city.name,
