@@ -61,5 +61,20 @@ There is only one endpoint available.
 GET /api/optimize?from=Istanbul&to=Prague&to=Moscow
 ```
 
+Response examples:  
+- If everything is fine
+    ```json
+    {
+      "dpk": 0.05,
+      "destination": "Bishkek"
+    }
+    ```
+- In case of an error
+    ```json
+    {
+      "message": "Couldn't find a flight."
+    }
+    ```
+
 ## Credits
 Icons made by <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
